@@ -1,5 +1,8 @@
-var userChoice = prompt("Do you choose rock, paper or scissors?");
-console.log("Joy: " + userChoice);
+var userName = prompt("What is your name?");
+
+var userChoice = prompt("Do you choose rock, paper or scissors?"); 
+    
+console.log(userName + ": " + userChoice);
 
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
@@ -13,29 +16,33 @@ if (computerChoice < 0.34) {
 var compare = function (choice1, choice2) {
     if (choice1 === choice2) 
     {
-        return "The result is a tie!";
+        return userName + " has tied with the computer!";
     }
     else if (choice1 === "rock") 
     {
         if (choice2 === "scissors") {
-            return "rock wins"; }
+            return "The computer wins!"; }
         else {
-            return "paper wins"; }
+            return userName + " wins!"; }
     }
     else if (choice1 === "paper") 
     {
         if (choice2 === "rock") {
-            return "paper wins"; }
+            return "the computer wins!"; }
         else {
-            return "scissors wins"; }
+            return userName + " wins!"; }
     }
     else if (choice1 === "scissors") {
         if (choice2 === "rock") {
-            return "rock wins"; }
+            return userName + " wins!"; }
         else {
-            return "scissors wins"; }
-    }   
+            return "the computer wins!"; }
+    }  
+    else if (choice2 !== "rock", "paper", "scissors", "Rock", "Paper", "Scissors") {
+        return "Fine then, " + userName + ", you can't play!"; }
 };
 
 compare (userChoice, computerChoice);
+
+
 
