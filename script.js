@@ -16,33 +16,34 @@ if (computerChoice < 0.34) {
 var compare = function (choice1, choice2) {
     if (choice1 === choice2) 
     {
-        return userName + " has tied with the computer!";
+        var userChoice = prompt("Oh no! You tied. Choose again - rock, paper, or scissors?");
+        console.log (userName + ": " + userChoice);
     }
     else if (choice1 === "rock") 
     {
         if (choice2 === "scissors") {
-            return "The computer wins!"; }
-        else {
             return userName + " wins!"; }
+        else {
+            return "The computer wins!"; }
     }
     else if (choice1 === "paper") 
     {
         if (choice2 === "rock") {
-            return "the computer wins!"; }
-        else {
             return userName + " wins!"; }
+        else {
+            return "the computer wins!"; }
     }
     else if (choice1 === "scissors") {
         if (choice2 === "rock") {
-            return userName + " wins!"; }
-        else {
             return "the computer wins!"; }
+        else {
+            return userName + " wins!"; }
     }  
-    else if (choice2 !== "rock", "paper", "scissors", "Rock", "Paper", "Scissors") {
+    else if (choice1 !== "rock", "paper", "scissors") {
         return "Fine then, " + userName + ", you can't play!"; }
+    else if (choice1 === "rope") {
+        return "You are a super genius loop-holer, and you automatically win!"; }
 };
 
 compare (userChoice, computerChoice);
-
-
 
